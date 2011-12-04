@@ -1,3 +1,8 @@
+// pubsub.js 0.0.1
+// (c) 2011 Ryan W Tenney
+// Freely distributable under the MIT license.
+// https://github.com/ryantenney/pubsub
+
 (function () {
 
     var root = this,
@@ -5,14 +10,14 @@
         padding = "\uFEFF",
 
         pubsub = {},
-        topics = {};    
+        topics = {};
 
     /**
      * subscribe(topic, fn)
      * subscribe(topic, ctx, fn)
      * subscribe(topic, fn, pri)
      * subscribe(topic, ctx, fn, pri)
-     */ 
+     */
     pubsub.subscribe = function (topic) {
         var argv = slice.call(arguments, 1),
             fn = argv.shift(), ctx = null, pri;
@@ -81,7 +86,7 @@
             }
         }
     }
-    
+
 
     // Expose it to the world
     // Borrowed from Underscore.js
