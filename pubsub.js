@@ -92,7 +92,7 @@
         exports.pubsub = pubsub;
     } else if (typeof define === 'function' && define.amd) {
         // Register as a named module with AMD.
-        define('underscore', function() {
+        define('pubsub', function() {
             return pubsub;
         });
     } else {
